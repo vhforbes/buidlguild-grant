@@ -1,18 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NextPage } from "next";
 import { parseEther } from "viem";
-import * as chains from "viem/chains";
-import { useAccount, useNetwork, useSwitchNetwork } from "wagmi";
+import { useAccount } from "wagmi";
 import { InputBase } from "~~/components/scaffold-eth";
 import deployedContracts from "~~/contracts/deployedContracts";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 
 const CreateEvent: NextPage = () => {
   const { address: connectedAddress } = useAccount();
-  const { switchNetwork } = useSwitchNetwork();
-  const { chain } = useNetwork();
 
   const usdContract_ = deployedContracts[11155111].usdTeste.address;
 
