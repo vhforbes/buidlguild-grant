@@ -56,23 +56,22 @@ const EventDetail = ({ scrollAddress, nearAddress, abi }: any) => {
         </h2>
         <p>{data[0].description}</p>
 
-        <p>Faltam {convertSecondsToDays(parseInt(data[0].dataEvento))} dias para o evento!</p>
+        <p>Tickets lasts {convertSecondsToDays(parseInt(data[0].dataEvento))} dias para o evento!</p>
 
-        <p>Endereço: {data[0].localEvento}</p>
+        <p>Address: {data[0].localEvento}</p>
 
         <div className="mb-4">
           <p>
-            Total arrecadado: <span className="font-bold text-xl">${formatUnits(data[0].totalArrecadado, 18)}</span>{" "}
+            Total funded: <span className="font-bold text-xl">${formatUnits(data[0].totalArrecadado, 18)}</span>{" "}
           </p>
           <p>
-            Meta de arrecadação:{" "}
-            <span className="font-bold text-xl">${formatUnits(data[0].totalArrecadadoDesejado, 18)}</span>
+            Fund goal: <span className="font-bold text-xl">${formatUnits(data[0].totalArrecadadoDesejado, 18)}</span>
           </p>
         </div>
 
         <div className="card-actions justify-center mt-auto">
           <button onClick={() => goToEventPage(scrollAddress)} className="btn btn-accent">
-            Compre seu ingresso!
+            Buy your ticket
           </button>
         </div>
       </div>

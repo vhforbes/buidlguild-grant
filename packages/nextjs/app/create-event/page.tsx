@@ -105,36 +105,36 @@ const CreateEvent: NextPage = () => {
         <div>
           <h1 className="text-xl font-bold">Create Event:</h1>
           <div>
-            <p>Nome do evento:</p>
+            <p>Event name:</p>
             <InputBase value={eventName} onChange={setEventName} />
           </div>
           <div>
-            <p>Local do evento:</p>
+            <p>Event local:</p>
             <InputBase value={eventLocal} onChange={setEventLocal} />
           </div>
           <div>
-            <p>Descrição do evento:</p>
+            <p>Event description:</p>
             <InputBase value={eventDescription} onChange={setEventDescription} />
           </div>
 
           <div>
-            <p>Dias que faltam para o evento:</p>
+            <p>Days to event:</p>
             <InputBase value={howManyDays} onChange={setHowManyDates} placeholder="DD-MM-YYYY" />
           </div>
           <div>
-            <p>URL do Logo:</p>
+            <p>Logo url:</p>
             <InputBase value={logoUrl} onChange={setLogoUrl} />
           </div>
           <div>
-            <p>URL do Banner:</p>
+            <p>Banner url:</p>
             <InputBase value={bannerUrl} onChange={setBannerUrl} />
           </div>
           <div>
-            <p>Ticker do ingresso:</p>
+            <p>Event ticker:</p>
             <InputBase value={symbol} onChange={setSymbol} />
           </div>
           <div>
-            <p>Objetivo de arrecadação:</p>
+            <p>Goal:</p>
 
             {/* Ensure this uses the correct variable for setting the state, fixing the potential typo */}
             <InputBase value={desiredAmount} onChange={setDesidedAmount} />
@@ -142,12 +142,12 @@ const CreateEvent: NextPage = () => {
         </div>
 
         <div>
-          <p>Tiers do evento:</p>
+          <p>Event tiers:</p>
           {/* Render existing tiers */}
           {eventTiers.map((tier, index) => (
             <div className="border-2 border-black flex" key={index}>
               <div>
-                <p>Quantidade: {tier.maxSupply}</p>
+                <p>Quantity: {tier.maxSupply}</p>
               </div>
 
               <div>
@@ -165,14 +165,14 @@ const CreateEvent: NextPage = () => {
             className="btn"
             onClick={() => document.getElementById("tier_modal")?.showModal()}
           >
-            Adiocionar Tier
+            Add tier
           </button>
 
           <dialog id="tier_modal" className="modal">
             <div className="modal-box">
-              <p>Preço</p>
+              <p>Price</p>
               <InputBase value={newTierPrice} onChange={setNewTierPrice} />
-              <p>Total de ingressos</p>
+              <p>Tickets total</p>
               <InputBase value={newTierMaxSupply} onChange={setNewTierMaxSupply} />
 
               <div className="modal-action">

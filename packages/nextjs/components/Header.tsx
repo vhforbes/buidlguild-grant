@@ -20,12 +20,12 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/",
   },
   {
-    label: "Criar evento",
+    label: "Create event",
     href: "/create-event",
     icon: <SparklesIcon className="h-4 w-4" />,
   },
   {
-    label: "Meus ingressos",
+    label: "My tickets",
     href: "/my-tickets",
     icon: <TicketIcon className="h-4 w-4" />,
   },
@@ -111,7 +111,6 @@ export const Header = () => {
           </div>
           <div className="flex flex-col">
             <span className="font-bold leading-tight">Events HUB</span>
-            <span className="text-xs">O mundo acontece aqui!</span>
           </div>
         </Link>
 
@@ -120,7 +119,7 @@ export const Header = () => {
         </ul>
       </div>
       <button onClick={() => mintUsd()} className="btn">
-        Mintar USD
+        Mint USD
       </button>
       <div className="navbar-end flex-grow mr-4">
         <RainbowKitCustomConnectButton />

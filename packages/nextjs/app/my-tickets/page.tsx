@@ -127,14 +127,14 @@ const Ticket = ({ quantity, tier, name, banner, address }: any) => {
         </figure>
         <div className="card-body items-center text-center">
           <h2 className="card-title">{name}</h2>
-          <p>Tier do ingresso: {tier + 1}</p>
-          <p>Quantidade de ingressos: {quantity}</p>
+          <p>Ticker tier: {tier + 1}</p>
+          <p>Tickets quantity: {quantity}</p>
           <button className="btn" onClick={() => goToEventPage(address)}>
             Ver evento
           </button>
           {extornoEnabled ? (
             <button className="btn" onClick={() => userExtorno()}>
-              Extornar
+              Refund
             </button>
           ) : null}
         </div>
